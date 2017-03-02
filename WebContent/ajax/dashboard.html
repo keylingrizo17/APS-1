@@ -1,0 +1,140 @@
+<!--Start Breadcrumb-->
+<div class="row">
+	<div id="breadcrumb" class="col-xs-12">
+		<ol class="breadcrumb">
+			<li><a href="index.html">Fundación de Lupus Eritematoso y
+					Sistémico de Nicaragua</a></li>
+			<!-- <li><a href="#">Dashboard</a></li>-->
+		</ol>
+	</div>
+</div>
+<!--End Breadcrumb-->
+<!--Start Dashboard 1-->
+<div id="dashboard-header" class="row">
+	<div class="col-xs-10 col-sm-2">
+		<h3>HOLA, FLESNIC!</h3>
+	</div>
+	<div class="col-xs-2 col-sm-1 col-sm-offset-1">
+		<div id="social" class="row">
+			<a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i
+				class="fa fa-facebook"></i></a>
+			<!-- <a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-linkedin"></i></a> -->
+			<a href="#"><i class="fa fa-youtube"></i></a>
+		</div>
+	</div>
+	<div class="clearfix visible-xs"></div>
+	<div class="col-xs-12 col-sm-8 col-md-7 pull-right">
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="sparkline-dashboard" id="sparkline-1"></div>
+				<div class="sparkline-dashboard-info">
+					<i class="fa fa-usd"></i>756.45M <span class="txt-primary">EBITDA</span>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="sparkline-dashboard" id="sparkline-2"></div>
+				<div class="sparkline-dashboard-info">
+					<i class="fa fa-usd"></i>245.12M <span class="txt-info">OIBDA</span>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="sparkline-dashboard" id="sparkline-3"></div>
+				<div class="sparkline-dashboard-info">
+					<i class="fa fa-usd"></i>107.83M <span>REVENUE</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Comenzamos a personalizar nuestra pagina web -->
+
+<div class="banner">
+	<div class="wrap">
+		<div class="banner-text">
+			<div id="owl-demo" class="owl-carousel owl-theme">
+				<div class="item">
+					<div class="banner-desc">
+						<h2>FLESNIC</h2>
+						<p>
+							Fundacion de Lupus Eritematoso <br />Sistemico de Nicaragua
+						</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="banner-desc">
+						<h2>Ayudando</h2>
+						<p>
+							A las personas con <br />el sindrome de la mariposa
+						</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="banner-desc">
+						<h2>Estamos Ubicados</h2>
+						<p>
+							Del CDI Guadalupe 4c Oeste 1c al Norte y 75 vrs al Oeste <br />Barrio
+							Brisas de Acosasco, León-Nicaragua
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--End Dashboard 1-->
+		<!--Start Dashboard 2-->
+		<!--<div class="row-fluid">
+	<div id="dashboard_links" class="col-xs-12 col-sm-2 pull-right">
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#" class="tab-link" id="overview">Overview</a></li>
+			<li><a href="#" class="tab-link" id="clients">Clients</a></li>
+			<li><a href="#" class="tab-link" id="graph">Statistics</a></li>
+			<li><a href="#" class="tab-link" id="servers">Servers</a></li>
+		</ul>
+	</div>
+	<div id="dashboard_tabs" class="col-xs-12 col-sm-10"> -->
+		<!--Start Dashboard Tab 1
+
+		Elemento Borrado para respectiva Moidificaciones, tomar referencias de la plantilla original-->
+
+		<!--End Dashboard Tab 1-->
+		<!--Start Dashboard Tab 2
+		
+		Elemento Borrado para respectiva Moidificaciones, tomar referencias de la plantilla original-->
+
+		<!--End Dashboard Tab 2-->
+		<!--Start Dashboard Tab 3
+		
+		Elemento Borrado para respectiva Moidificaciones, tomar referencias de la plantilla original-->
+
+		<!--End Dashboard Tab 3-->
+		<!--Start Dashboard Tab 4
+		
+		Elemento Borrado para respectiva Moidificaciones, tomar referencias de la plantilla original -->
+
+		<!--End Dashboard Tab 4-->
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!--End Dashboard 2 -->
+<div style="height: 40px;"></div>
+<script type="text/javascript">
+// Array for random data for Sparkline
+var sparkline_arr_1 = SparklineTestData();
+var sparkline_arr_2 = SparklineTestData();
+var sparkline_arr_3 = SparklineTestData();
+$(document).ready(function() {
+	// Make all JS-activity for dashboard
+	DashboardTabChecker();
+	// Load Knob plugin and run callback for draw Knob charts for dashboard(tab-servers)
+	LoadKnobScripts(DrawKnobDashboard);
+	// Load Sparkline plugin and run callback for draw Sparkline charts for dashboard(top of dashboard + plot in tables)
+	LoadSparkLineScript(DrawSparklineDashboard);
+	// Load Morris plugin and run callback for draw Morris charts for dashboard
+	LoadMorrisScripts(MorrisDashboard);
+	// Make beauty hover in table
+	$("#ticker-table").beautyHover();
+});
+</script>
