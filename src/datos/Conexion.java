@@ -12,7 +12,7 @@ public class Conexion {
 		
 		try{
 			if(con==null){
-				String url ="jdbc:mysql://localhost/flesnic?autoReconnect=true";
+				String url ="jdbc:mysql://localhost/flesnic;autoReconnect=true;";
 				String driver="com.mysql.jdbc.Driver";
 				String pwd="1234";
 				String usr="root";

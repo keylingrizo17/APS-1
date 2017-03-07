@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class medicamento {
 	
-	private int idmedicamento;
+	private int id_medicamento;
 	private String nombre;
 	private String presentacion;
 	private Date caducidad;
@@ -14,10 +14,10 @@ public class medicamento {
 	private boolean existencia;
 	
 	public int getIdmedicamento() {
-		return idmedicamento;
+		return id_medicamento;
 	}
-	public void setIdmedicamento(int idmedicamento) {
-		this.idmedicamento = idmedicamento;
+	public void setIdmedicamento(int id_medicamento) {
+		this.id_medicamento = id_medicamento;
 	}
 	public String getNombre() {
 		return nombre;

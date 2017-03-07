@@ -273,6 +273,10 @@
 								</select>
 							</div>
 							
+						</div>
+						
+						<div class="form-group">
+
 							<label class="col-sm-2 control-label">Fecha que fue diagnosticado</label>
 							<div class="col-sm-2">
 								<input type="text" class="form-control" placeholder="DD/MM/AA"
@@ -284,12 +288,16 @@
 					
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Tiempo de padecerlo</label>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<input type="text" class="form-control"
 									data-toggle="tooltip" data-placement="bottom" required>
 							</div>
+							
+						</div>
+						
+						<div class="form-group">
 							<label class="col-sm-2 control-label">Tipo de lupus</label>
-							<div class="col-sm-4">
+							<div class="col-sm-2">
 								<select id="s2_with_tag" multiple="multiple"
 									class="populate placeholder" required>
 									<option>Sistémico</option>
@@ -300,7 +308,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Medico que le trata actualmente</label>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<input type="text" class="form-control"
 									data-toggle="tooltip" data-placement="bottom" required>
 							</div>
@@ -308,7 +316,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Hospital donde ha sido atendido</label>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<input type="text" class="form-control" data-toggle="tooltip"
 									data-placement="top" >
 							</div>
@@ -321,6 +329,9 @@
 								<input type="text" class="form-control" data-toggle="tooltip"
 									data-placement="top">
 							</div>
+						</div>
+						
+						<div class="form-group">
 
 							<label class="col-sm-2 control-label">No. de Hospitalizaciones</label>
 							<div class="col-sm-2">
@@ -331,17 +342,22 @@
 
 						
 						<div class="clearfix"></div>
-						<div class="form-group">
-
-							<div class="col-sm-offset-2 col-sm-2">
-								<button type="submit" class="btn btn-danger btn-label btn-block ">Guardar</button>
-							</div>
-
-							<div class="col-sm-offset-2 col-sm-2">
-								<button type="reset" class="btn btn-danger btn-label btn-block">Cancelar</button>
-							</div>
-
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-floppy-o fa-2x"></i>&nbsp;&nbsp; Guardar &nbsp;&nbsp;</button>
 						</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-pencil fa-2x" ></i>&nbsp;&nbsp; Modificar &nbsp;&nbsp;</button>
+						</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-trash-o fa-2x" ></i>&nbsp;&nbsp; Eliminar &nbsp;&nbsp;</button>
+						</div>
+						
+						<div class="col-sm-2">
+							<button type="reset" class="btn btn-danger btn-label btn-block"><i class="fa fa-ban fa-2x" ></i>&nbsp;&nbsp;Cancelar&nbsp;&nbsp;</button>
+						</div>
+						
+					</div>
 					</form>
 					
 				</div><br><br>
@@ -365,6 +381,24 @@
 									class="populate placeholder" required>
 								</select>
 							</div>
+							
+							<div class="col-sm-6">
+						<div class="checkbox-inline">
+							<label>
+								<input type="checkbox" > Eritema malar(ala de mariposa)
+								<i class="fa fa-square-o"></i>
+							</label>
+						</div>
+						
+						<div class="col-sm-6">
+						<div class="checkbox-inline">
+							<label>
+								<input type="checkbox"> Exantema Discoide
+								<i class="fa fa-square-o"></i>
+							</label>
+						</div>
+					</div>
+					</div>
 						</div>
 						
 						<div class="form-group">
@@ -382,24 +416,10 @@
 								<i class="fa fa-square-o"></i>
 								</label>
 							</div>
+							
+							
 						</div>
-
-						<div class="row form-group">
-					<div class="col-sm-12">
-						<div class="checkbox-inline">
-							<label>
-								<input type="checkbox" > Eritema malar(ala de mariposa)
-								<i class="fa fa-square-o"></i>
-							</label>
-						</div>
-						<div class="checkbox-inline">
-							<label>
-								<input type="checkbox"> Exantema Discoide
-								<i class="fa fa-square-o"></i>
-							</label>
-						</div>
-					</div>
-						</div>
+						
 						
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Foto sensibilidad</label>
@@ -464,8 +484,13 @@
 								</select>
 							</div>
 							
+							
+						</div>
+						
+						<div class="form-group">
+							
 							<label class="col-sm-2 control-label">SNC</label>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<select id="s5_with_tag" multiple="multiple"
 									class="populate placeholder" required>
 									<option>Pérdida de memoria</option>
@@ -480,17 +505,22 @@
 						
 					
 						<div class="clearfix"></div>
-						<div class="form-group">
-
-							<div class="col-sm-offset-2 col-sm-2">
-								<button type="submit" class="btn btn-danger btn-label btn-block">Guardar</button>
-							</div>
-
-							<div class=" col-sm-offset-2 col-sm-2">
-								<button type="reset" class="btn btn-danger btn-label btn-block">Cancelar</button>
-							</div>
-
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-floppy-o fa-2x"></i>&nbsp;&nbsp; Guardar &nbsp;&nbsp;</button>
 						</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-pencil fa-2x" ></i>&nbsp;&nbsp; Modificar &nbsp;&nbsp;</button>
+						</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-trash-o fa-2x" ></i>&nbsp;&nbsp; Eliminar &nbsp;&nbsp;</button>
+						</div>
+						
+						<div class="col-sm-2">
+							<button type="reset" class="btn btn-danger btn-label btn-block"><i class="fa fa-ban fa-2x" ></i>&nbsp;&nbsp;Cancelar&nbsp;&nbsp;</button>
+						</div>
+						
+					</div>
 					</form>
 					
 				</div><br> <br>
@@ -552,17 +582,22 @@
 						
 				
 						<div class="clearfix"></div>
-						<div class="form-group">
-
-							<div class="col-sm-offset-2 col-sm-2">
-								<button type="submit" class="btn btn-danger btn-label btn-block">Guardar</button>
-							</div>
-
-							<div class=" col-sm-offset-2 col-sm-2">
-								<button type="reset" class="btn btn-danger btn-label btn-block">Cancelar</button>
-							</div>
-
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-floppy-o fa-2x"></i>&nbsp;&nbsp; Guardar &nbsp;&nbsp;</button>
 						</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-pencil fa-2x" ></i>&nbsp;&nbsp; Modificar &nbsp;&nbsp;</button>
+						</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-trash-o fa-2x" ></i>&nbsp;&nbsp; Eliminar &nbsp;&nbsp;</button>
+						</div>
+						
+						<div class="col-sm-2">
+							<button type="reset" class="btn btn-danger btn-label btn-block"><i class="fa fa-ban fa-2x" ></i>&nbsp;&nbsp;Cancelar&nbsp;&nbsp;</button>
+						</div>
+						
+					</div>
 					</form>
 					
 				</div><br> <br>

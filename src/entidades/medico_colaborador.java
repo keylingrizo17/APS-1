@@ -2,7 +2,7 @@ package entidades;
 
 public class medico_colaborador {
 	
-private int idmedico;
+private int id_medico;
 	private String nombre;
 	private String telefono;
 	private String apellidos;
@@ -14,10 +14,10 @@ private int idmedico;
 	private String especialidad;
 	
 	public int getIdmedico() {
-		return idmedico;
+		return id_medico;
 	}
-	public void setIdmedico(int idmedico) {
-		this.idmedico = idmedico;
+	public void setIdmedico(int id_medico) {
+		this.id_medico = id_medico;
 	}
 	public String getNombre() {
 		return nombre;

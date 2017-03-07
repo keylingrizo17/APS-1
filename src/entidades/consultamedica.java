@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 
 public class consultamedica {
 	
-	private int id_consulta;
+	private int idconsulta;
 	private String medico;
 	private String lugar;
 	private String diagnostico;
@@ -19,10 +19,10 @@ public class consultamedica {
 	
 	
 	public int getId_consulta() {
-		return id_consulta;
+		return idconsulta;
 	}
 	public void setId_consulta(int id_consulta) {
-		this.id_consulta = id_consulta;
+		this.idconsulta = id_consulta;
 	}
 	public String getMedico() {
 		return medico;

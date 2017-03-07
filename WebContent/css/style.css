@@ -1,6 +1,6 @@
 body {
-	color: #525252;
-	background: #6AA6D6 url(../img/devoops_pattern_b10.png) 0 0 repeat;
+	color: #2196F3;
+	background: green url(../img/devoops_pattern_b10.png) 0 0 repeat;
 }
 
 .body-expanded, .modal-open {
@@ -16,6 +16,112 @@ body {
 .body-screensaver {
 	overflow: hidden;
 }
+
+input[name="slider-select-element"] {
+    display: none;
+}
+
+#slider-arrows {
+    margin: -10% auto 0 auto;
+    width: 70%;
+}
+
+#slider-box {
+    height: 50%;
+    width: 300%;
+}
+
+#slider-container {
+    height: 30%;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    width: 80%;
+}
+
+#picture{
+
+    min-height: 250px;
+    max-height: 50%;
+    width: 40%;
+}
+
+
+
+.slider-element {
+    float: left;
+    width: 33.333%;
+}
+
+#element1:checked ~ #slider-arrows label:nth-child(2),
+#element2:checked ~ #slider-arrows label:nth-child(3),
+#element3:checked ~ #slider-arrows label:nth-child(1) {
+    display: block;
+    float: right;
+}
+
+#element1:checked ~ #slider-arrows label:nth-child(3),
+#element2:checked ~ #slider-arrows label:nth-child(1),
+#element3:checked ~ #slider-arrows label:nth-child(2) {
+    display: block;
+    float: left;
+}
+
+#element1:checked ~ #slider-arrows label:nth-child(2):before,
+#element2:checked ~ #slider-arrows label:nth-child(3):before,
+#element3:checked ~ #slider-arrows label:nth-child(1):before {
+    color: black;
+    content: "\f054";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
+#element1:checked ~ #slider-arrows label:nth-child(3):before,
+#element2:checked ~ #slider-arrows label:nth-child(1):before,
+#element3:checked ~ #slider-arrows label:nth-child(2):before {
+    color: black;
+    content: "\f053";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
+#element1:checked ~ #slider-container #slider-box {
+    margin-left: 0;
+}
+
+#element2:checked ~ #slider-container #slider-box {
+    margin-left: -100%;
+}
+
+#element3:checked ~ #slider-container #slider-box {
+    margin-left: -200%;
+}
+
+#slider-arrows label {
+    color: transparent;
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
+    height: 20px;
+    width: 20px;
+}
+
+#slider-box {
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+}
+
 
 h1, .h1, h2, .h2, h3, .h3 {
 	margin: 0;
@@ -1327,6 +1433,7 @@ ul.DTTT_dropdown.dropdown-menu>li:hover>a {
 	.radio input[type=radio], .radio-inline input[type=radio] {
 	position: absolute;
 	clip: rect(0, 0, 0, 0);
+	left: 39px;
 }
 
 .checkbox i, .checkbox-inline i, .radio i, .radio-inline i {
