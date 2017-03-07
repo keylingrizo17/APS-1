@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" %>
+    pageEncoding="ISO-8859-1" import="entidades.*, datos.*, java.util.*" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -263,7 +263,7 @@
 				
 				<div class="box-content">
 
-					<form class="form-horizontal" role="form" action="./#" method="post">
+					<form class="form-horizontal" role="form" action="./SlMedico" method="post">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Nombre</label>
 							<div class="col-sm-3">
@@ -331,7 +331,7 @@
 						<div class="form-group">
 
 							<div class="col-sm-offset-2 col-sm-2">
-								<button type="submit" class="btn btn-danger btn-label btn-block ">Guardar</button>
+								<button type="submit" class="btn btn-danger btn-label btn-block " id="guardar" >Guardar</button>
 							</div>
 							
 							<div class=" col-sm-2">
