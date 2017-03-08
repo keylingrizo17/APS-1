@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="entidades.*, datos.*, java.util.*"%>
+    pageEncoding="ISO-8859-1" import="entidades.*, datos.*, java.util.*, java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -59,15 +59,15 @@
 							<div class="col-sm-2">
 								<select id="s2_with_tag" multiple="multiple"
 									class="populate placeholder" required>
-									<option>Hombre</option>
-									<option>Mujer</option>
+									<option>HOMBRE</option>
+									<option>MUJER</option>
 								</select>
 							</div>
 
 						</div>
 
 						<div class="form-group">
-							<label class="col-sm-2 control-label">Telefono</label>
+							<label class="col-sm-2 control-label">Teléfono</label>
 							<div class="col-sm-2">
 								<input type="text" class="form-control" data-toggle="tooltip"
 									data-placement="top" placeholder="Telefono">
@@ -87,10 +87,10 @@
 							<div class="col-sm-2">
 								<select id="s3_with_tag" multiple="multiple"
 									class="populate placeholder" required>
-									<option>Casad@</option>
-									<option>Solter@</option>
-									<option>Viud@</option>
-									<option>Divorciad@</option>
+									<option>CASADO(A)</option>
+									<option>SOLTERO(A)</option>
+									<option>VIUDO(A)</option>
+									<option>DIVORCIADO(A)</option>
 								</select>
 							</div>
 
@@ -112,10 +112,21 @@
 						</div>
 						
 						<div class="form-group">
-							<label class="col-sm-2 control-label">Depatamento</label>
+							<label class="col-sm-2 control-label">Departamento</label>
 							<div class="col-sm-2">
-								<select id="s5_with_tag" multiple="multiple"
+								<select name="departamento" id="s5_with_tag" multiple="multiple"
 									class="populate placeholder" required>
+									<option>Seleccione ...</option>
+									<%
+									DtDepartamento datosdpto =  new DtDepartamento();
+									ResultSet rs = datosdpto.cargarDatos();
+									while(rs.next())
+									{
+									%>
+									<option value="<%=rs.getInt(1)%>"><%=rs.getString(2)%></option>
+									<%
+									}
+									%>
 									
 								</select>
 							</div>
@@ -123,11 +134,8 @@
 							<label class="col-sm-2 control-label">Municipio</label>
 							<div class="col-sm-2">
 								<select id="s6_with_tag" multiple="multiple"
-									class="populate placeholder" required>
-									
-								</select>
+									class="populate placeholder" required></select>
 							</div>
-							
 						</div>
 						
 						<div class="form-group">
@@ -145,7 +153,7 @@
 						</div>
 						
 						<div class="form-group">
-							<label class="col-sm-2 control-label">Cedula</label>
+							<label class="col-sm-2 control-label">Cédula</label>
 							<div class="col-sm-2">
 								<input type="text" class="form-control" data-toggle="tooltip"
 									data-placement="top" placeholder="Cedula">
@@ -235,10 +243,10 @@
 							<div class="col-sm-3">
 								<select id="s8_with_tag" multiple="multiple"
 									class="populate placeholder" required>
-									<option>Casad@</option>
-									<option>Solter@</option>
-									<option>Viud@</option>
-									<option>Divorciad@</option>
+									<option>CASADO(A)</option>
+									<option>SOLTERO(A)</option>
+									<option>VIUDO(A)</option>
+									<option>DIVORCIADO(A)</option>
 								</select>
 							</div>
 
@@ -249,6 +257,17 @@
 							<div class="col-sm-3">
 								<select id="s4_with_tag" multiple="multiple"
 									class="populate placeholder" required>
+<!-- 									<option>Seleccione ...</option> -->
+									<%
+									DtParentesco datospar =  new DtParentesco();
+									ResultSet rs2 = datospar.cargarDatos();
+									while(rs2.next())
+									{
+									%>
+									<option value="<%=rs2.getInt(1)%>"><%=rs2.getString(2)%></option>
+									<%
+									}
+									%>
 								</select>
 							</div>
 							
@@ -289,7 +308,7 @@
 						</div>
 						
 						<div class="form-group">
-							<label class="col-sm-2 control-label">Cedula</label>
+							<label class="col-sm-2 control-label">Cédula</label>
 							<div class="col-sm-2">
 								<input type="text" class="form-control" data-toggle="tooltip"
 									data-placement="top" placeholder="Cedula">
@@ -301,8 +320,8 @@
 							<div class="col-sm-2">
 								<select id="s9_with_tag" multiple="multiple"
 									class="populate placeholder" required>
-									<option>Hombre</option>
-									<option>Mujer</option>
+									<option>HOMBRE</option>
+									<option>MUJER</option>
 								</select>
 							</div>
 
@@ -354,6 +373,29 @@ function DemoSelect2(){
 function DemoTimePicker(){
 	$('#input_time').timepicker({setDate: new Date()});
 }
+
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(function(){
+var fillSecondary = function(){
+	var selected = $('#s5_with_tag').val();
+	$('#s6_with_tag').empty();
+	
+	$.getJSON("preinscripcionP.jsp?selected="+selected,null,function(data){
+	DtMunicipio datosmun =  new DtMunicipio();
+	ResultSet rs1 = datosmun.cargarDatos();
+	while(rs1.next())
+	{
+	$('#s6_with_tag').append('<option value="'+rs1.getString(1)+'">'+rs1.getString(3)+'</option>');
+	});
+}}}
+	$('#s5_with_tag').change(fillSecondary);
+fillSecondary();
+
+
+});
+
 $(document).ready(function() {
 	// Create Wysiwig editor for textare
 	TinyMCEStart('#wysiwig_simple', null);

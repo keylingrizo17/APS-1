@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="entidades.*, datos.*, java.util.*"%>
+    pageEncoding="ISO-8859-1" import=" java.sql.*, entidades.*, datos.*, java.util.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -90,6 +90,16 @@
 						<div class="col-sm-2">
 							<select id="s3_with_tag" multiple="multiple"
 									class="populate placeholder" required>
+									<%
+									DtRol datosrol =  new DtRol();
+									ResultSet rs = datosrol.cargarDatos();
+									while(rs.next())
+									{
+									%>
+									<option value="<%=rs.getInt(1)%>"><%=rs.getString(2)%></option>
+									<%
+									}
+									%>
 								</select>
 						</div>
 					</div>
@@ -115,49 +125,49 @@
 				
 			</div>
 		
-		<div class="box-content">
+<!-- 		<div class="box-content"> -->
 
-<h4 class="page-header">Asignarle opciones al usuario</h4>
-				<form class="form-horizontal" role="form">
-					<div class="form-group">
-						<label class="col-sm-2 control-label">Usuario</label>
-						<div class="col-sm-2">
-							<select id="s4_with_tag" multiple="multiple"
-									class="populate placeholder" required>
-								</select>
-						</div>
+<!-- <h4 class="page-header">Asignarle opciones al usuario</h4> -->
+<!-- 				<form class="form-horizontal" role="form"> -->
+<!-- 					<div class="form-group"> -->
+<!-- 						<label class="col-sm-2 control-label">Usuario</label> -->
+<!-- 						<div class="col-sm-2"> -->
+<!-- 							<select id="s4_with_tag" multiple="multiple" -->
+<!-- 									class="populate placeholder" required> -->
+<!-- 								</select> -->
+<!-- 						</div> -->
 						
-					</div>
+<!-- 					</div> -->
 					
-					<div class="form-group">
-						<label class="col-sm-2 control-label">Opción</label>
-						<div class="col-sm-2">
-							<select id="s5_with_tag" multiple="multiple"
-									class="populate placeholder" required>
-								</select>
-						</div>
-					</div>
+<!-- 					<div class="form-group"> -->
+<!-- 						<label class="col-sm-2 control-label">Opción</label> -->
+<!-- 						<div class="col-sm-2"> -->
+<!-- 							<select id="s5_with_tag" multiple="multiple" -->
+<!-- 									class="populate placeholder" required> -->
+<!-- 								</select> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 					
-					<div class="clearfix"></div>
-					<div class="form-group">
-						<div class="col-sm-offset-2 col-sm-2">
-							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-floppy-o fa-2x"></i>&nbsp;&nbsp; Guardar &nbsp;&nbsp;</button>
-						</div>
-						<div class="col-sm-2">
-							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-pencil fa-2x" ></i>&nbsp;&nbsp; Modificar &nbsp;&nbsp;</button>
-						</div>
-						<div class="col-sm-2">
-							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-trash-o fa-2x" ></i>&nbsp;&nbsp; Eliminar &nbsp;&nbsp;</button>
-						</div>
+<!-- 					<div class="clearfix"></div> -->
+<!-- 					<div class="form-group"> -->
+<!-- 						<div class="col-sm-offset-2 col-sm-2"> -->
+<!-- 							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-floppy-o fa-2x"></i>&nbsp;&nbsp; Guardar &nbsp;&nbsp;</button> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-sm-2"> -->
+<!-- 							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-pencil fa-2x" ></i>&nbsp;&nbsp; Modificar &nbsp;&nbsp;</button> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-sm-2"> -->
+<!-- 							<button type="submit" class="btn btn-danger btn-label btn-block "><i class="fa fa-trash-o fa-2x" ></i>&nbsp;&nbsp; Eliminar &nbsp;&nbsp;</button> -->
+<!-- 						</div> -->
 						
-						<div class="col-sm-2">
-							<button type="reset" class="btn btn-danger btn-label btn-block"><i class="fa fa-ban fa-2x" ></i>&nbsp;&nbsp;Cancelar&nbsp;&nbsp;</button>
-						</div>
+<!-- 						<div class="col-sm-2"> -->
+<!-- 							<button type="reset" class="btn btn-danger btn-label btn-block"><i class="fa fa-ban fa-2x" ></i>&nbsp;&nbsp;Cancelar&nbsp;&nbsp;</button> -->
+<!-- 						</div> -->
 						
-					</div>
-				</form>
+<!-- 					</div> -->
+<!-- 				</form> -->
 				
-			</div>
+<!-- 			</div> -->
 		
 <script type="text/javascript">
 // Run Select2 plugin on elements
