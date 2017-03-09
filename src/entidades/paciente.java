@@ -11,11 +11,11 @@ public class paciente {
 	private String nombre;
 	private String apellidos;
 	private String ocupacion;
-	private char sexo;
+	private String sexo;
 	private String telefono;
 	private String celular;
 	private String correo;
-	private char diagnostico;
+	private String diagnostico;
 	private String direccion;
 	private String cedula;
 	private int edad;
@@ -67,10 +67,10 @@ public class paciente {
 	public void setOcupacion(String ocupacion) {
 		this.ocupacion = ocupacion;
 	}
-	public char getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
-	public void setSexo(char sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 	public String getTelefono() {
@@ -91,10 +91,10 @@ public class paciente {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-	public char getDiagnostico() {
+	public String getDiagnostico() {
 		return diagnostico;
 	}
-	public void setDiagnostico(char diagnostico) {
+	public void setDiagnostico(String diagnostico) {
 		this.diagnostico = diagnostico;
 	}
 	public String getDireccion() {

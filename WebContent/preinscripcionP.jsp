@@ -32,7 +32,7 @@
 		
 <div class="box-content">
 				<h4 class="page-header">Registrar paciente</h4>
-				<form class="form-horizontal" >
+				<form class="form-horizontal" action="./Sl_Paciente" method="post">
 					<div class="form-group">
 							<label class="col-sm-2 control-label">No. Ficha</label>
 							<div class="col-sm-2">
@@ -212,7 +212,7 @@
 
 					<form class="form-horizontal" role="form">
 						<h4 class="page-header">Registrar al amigo o familiar</h4>
-						<div class="form-group">
+						<div class="form-group" action="./Sl_amigo" method="post">
 							<label class="col-sm-2 control-label">Paciente</label>
 							<div class="col-sm-3">
 								<select id="s7_with_tag" multiple="multiple"
@@ -374,24 +374,22 @@ function DemoTimePicker(){
 	$('#input_time').timepicker({setDate: new Date()});
 }
 
-<script
-src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>
-$(function(){
-var fillSecondary = function(){
-	var selected = $('#s5_with_tag').val();
-	$('#s6_with_tag').empty();
+
+// $(function(){
+// var fillSecondary = function(){
+// 	var selected = $('#s5_with_tag').val();
+// 	$('#s6_with_tag').empty();
 	
-	$.getJSON("preinscripcionP.jsp?selected="+selected,null,function(data){
-	DtMunicipio datosmun =  new DtMunicipio();
-	ResultSet rs1 = datosmun.cargarDatos();
-	while(rs1.next())
-	{
-	$('#s6_with_tag').append('<option value="'+rs1.getString(1)+'">'+rs1.getString(3)+'</option>');
-	});
-}}}
-	$('#s5_with_tag').change(fillSecondary);
-fillSecondary();
+// 	$.getJSON("preinscripcionP.jsp?selected="+selected,null,function(data){
+// 	DtMunicipio datosmun =  new DtMunicipio();
+// 	ResultSet rs1 = datosmun.cargarDatos();
+// 	while(rs1.next())
+// 	{
+// 	$('#s6_with_tag').append('<option value="'+rs1.getString(1)+'">'+rs1.getString(3)+'</option>');
+// 	});
+// }
+// 	$('#s5_with_tag').change(fillSecondary);
+// fillSecondary();
 
 
 });

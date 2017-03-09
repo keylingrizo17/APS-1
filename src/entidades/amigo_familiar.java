@@ -7,12 +7,12 @@ private int id_paciente;
 private int id_parentesco;
  private String nombre;
  private String apellido;
- private char cedula;
- private int celular;
+ private String cedula;
+ private String celular;
  private String correo;
  private String direccion;
  private int edad;
- private char sexo;
+ private String sexo;
  private String telefono;
  private String estado_civil;
  private String paciente;
@@ -49,16 +49,16 @@ public String getApellido() {
 public void setApellido(String apellido) {
 	this.apellido = apellido;
 }
-public char getCedula() {
+public String getCedula() {
 	return cedula;
 }
-public void setCedula(char cedula) {
+public void setCedula(String cedula) {
 	this.cedula = cedula;
 }
-public int getCelular() {
+public String getCelular() {
 	return celular;
 }
-public void setCelular(int celular) {
+public void setCelular(String celular) {
 	this.celular = celular;
 }
 public String getCorreo() {
@@ -79,10 +79,10 @@ public int getEdad() {
 public void setEdad(int edad) {
 	this.edad = edad;
 }
-public char getSexo() {
+public String getSexo() {
 	return sexo;
 }
-public void setSexo(char sexo) {
+public void setSexo(String sexo) {
 	this.sexo = sexo;
 }
 public String getTelefono() {
